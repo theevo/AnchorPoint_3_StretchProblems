@@ -5,7 +5,7 @@
  ## JSONSerialization
  
  ### Instructions:
- #### The solution from JSONSerialization (3.2) is the starting code for this stretch problem:
+ *The solution from JSONSerialization (3.2) is the starting code for this stretch problem*
  * Read about [Codable](https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types)
  * Using what you learned from the codable documentation and what you discover online, convert the person class into a class that conforms to the Codable protocol.
  * Use your new class and the JSONDedocer.decode function to decode your data into a Person object
