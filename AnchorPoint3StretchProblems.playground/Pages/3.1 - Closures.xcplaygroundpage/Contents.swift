@@ -17,5 +17,30 @@ var numbersArray = [11,24,45,44,59,43,88,93,58,11,13,14,15,190]
 var stringsArray = ["I", "Love", "DevMountain"]
 var blackDiamondDictionary = ["Mama" : "too cold", "Papa" : "too hot", "Baby" : "just right"]
 
+let numbersDivBy3 = numbersArray.filter { x in
+    x % 3 == 0
+}
+
+print(numbersDivBy3)
+
+let highestInNumbers = numbersArray.reduce(0, { x, y in
+    x > y ? x : y
+} )
+
+print(highestInNumbers)
+
+let iLoveDevMtnString = stringsArray.reduce(into: "") {sentence, word in
+    sentence += "\(word) "
+}
+
+print(iLoveDevMtnString)
+
+let threeBearsString = blackDiamondDictionary.compactMap { bear, temp in
+    "\(bear) bear's porridge was \(temp)"
+}.reduce("") { paragraph, sentence in
+    "\(paragraph)\n\(sentence)"
+}
+
+print(threeBearsString)
 
 //: [Next](@next)
