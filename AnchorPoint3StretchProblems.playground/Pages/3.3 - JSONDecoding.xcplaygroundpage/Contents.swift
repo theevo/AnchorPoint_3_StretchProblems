@@ -80,7 +80,7 @@ do {
     
 }
 
-class Person {
+class Person: Codable {
     
     var name: String
     
@@ -124,4 +124,16 @@ class Person {
     
 }
 
+let person = try JSONDecoder().decode(Person.self, from: data)
+
+// this also works...
+//let person = try? JSONDecoder().decode(Person.self, from: data)
+
+
+
+print("=== JSON unwrapped with decoder! ===")
+print(person.name)
+print(person.age)
+print(person.hasLice)
+print(person.siblingNames)
 //: [Next](@next)
